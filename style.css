@@ -1,0 +1,104 @@
+:root {
+--white: hsl(0, 0%, 100%);
+--stone100: hsl(30, 54%, 90%);
+--stone150: hsl(30, 18%, 87%);
+--stone600: hsl(30, 10%, 34%);
+--stone900: hsl(24, 5%, 18%);
+--brown800: hsl(14, 45%, 36%);
+--rose800: hsl(332, 51%, 32%);
+--rose50: hsl(330, 100%, 98%);
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--stone100);
+}
+
+.container {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+}
+
+.dish {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-left: auto;
+}
+
+.header, .section-header {
+    font-family: 'Young Serif', serif;
+}
+
+.header {
+    color: var(--stone900);
+    font-weight: 400;
+    /*resize header with screen size*/
+    font-size: 4vw;
+}
+
+.section-header {
+    font-size: 3vw;
+    font-weight: 400;
+    color: var(--brown800);
+}
+
+.preparation {
+    background-color: var(--rose50);
+    padding: 3vw;
+    border-radius: 10px;
+}
+
+.time-spent {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 2.5vw;
+    color: var(--rose800);
+    margin-left: 1.5rem;
+}
+
+p, li {
+    font-family: 'Outfit', sans-serif;
+    color: var(--stone600);
+}
+
+/*This allows the space between the markers from the list items*/
+ol li, ul li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+/*Style markers and determine space to list items*/
+ol li::marker, ul li::marker {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: var(--rose800);
+    margin-inline-end: 1.5rem;
+}
+
+/*remove padding with smaller screens so as to not squeeze the page too much*/
+@media screen and  (max-width: 499px){
+    body {
+        padding: 0;
+    }
+}
