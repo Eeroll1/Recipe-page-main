@@ -80,6 +80,7 @@ body {
 p, li {
     font-family: 'Outfit', sans-serif;
     color: var(--stone600);
+    line-height: 1.6;
 }
 
 /*This allows the space between the markers from the list items*/
@@ -96,8 +97,31 @@ ol li::marker, ul li::marker {
     margin-inline-end: 1.5rem;
 }
 
+.nutrition {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.values {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.5px solid var(--stone600);
+}
+
+.macro {
+    flex: 1 1 50%;
+}
+
+.number {
+    color: var(--brown800);
+    font-weight: 700;
+    flex: 1 1 50%;
+}
+
 /*remove padding with smaller screens so as to not squeeze the page too much*/
-@media screen and  (max-width: 499px){
+@media screen and  (max-width: 549px){
     body {
         padding: 0;
     }
